@@ -22,7 +22,13 @@
   --container-width: 32.5rem;
   --container-height: 56.5rem;
   
-  --content-padding: 2.25rem;
+  --content-padding: 3rem 2.25rem;
+
+  --fs-header: 2.1rem;
+  --fs-description: 1.5rem;
+  --fs-flex-column: 1.5rem;
+
+  --descriotion-width: 25ch;
 }
 
 * {
@@ -30,7 +36,7 @@
 }
 
 html {
-  font-size: 63.5%;
+  font-size: 62.5%;
 }
 
 body {
@@ -56,7 +62,7 @@ body {
 }
 
 .container {
-  background-color: var(--clr-neutral-100);
+  background-color: white;
 
   height: var(--container-height);
   width: var(--container-width);
@@ -83,9 +89,11 @@ body {
   padding: var(--content-padding);
   margin: 0;
   
+  width: 100%;
   height: 100%;
 
   display: flex;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 
@@ -95,19 +103,15 @@ body {
 .header {
   color: var(--clr-neutral-500);
 
-  font-size: 2.2rem;
+  font-size: var(--fs-header);
   font-weight: var(--fw-black);
-
-  margin: 1rem;
-  padding: 0;
 } 
 
 .description {
-  font-size: 1.5rem;
+  font-size: var(--fs-description);
   line-height: 1.6;
 
-  margin: .5rem;
-  width: 25ch;
+  width: var(--descriotion-width);
 }
 
 .flex-row {
@@ -118,7 +122,6 @@ body {
   gap: 1.5rem;
   align-items: center;
 
-  margin: 2.5rem;
   padding: 1.5rem;
 
   width: 100%;
@@ -132,7 +135,7 @@ body {
   flex-direction: column;
   gap: 0.25rem;
 
-  font-size: 1.5rem;
+  font-size: var(--fs-flex-column);
 }
 
 .flex-column span:first-child {
@@ -143,7 +146,7 @@ body {
 .change {
   color: var(--clr-primary-800);
 
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: var(--fw-bold);
 
   text-decoration: underline;
@@ -170,7 +173,23 @@ body {
 .cancel-order {
   font-size: 1.5rem;
   font-weight: var(--fw-bold);
-  margin-top: 2rem;
+}
+
+@media (min-width: 32rem) and (min-height: 50rem) {
+  :root {
+    --body-bg-image: url("images/pattern-background-desktop.svg");
+
+    --container-width: 45rem;
+    --container-height: 70rem;
+    
+    --content-padding: 4.75rem;
+
+    --fs-header: 2.75rem;
+    --fs-flex-column: 1.5rem;
+    --fs-description: 1.7rem;
+
+    --descriotion-width: 30ch;
+  }
 }
 
 
