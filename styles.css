@@ -7,6 +7,7 @@
   --clr-neutral-500: hsl(223, 47%, 23%);
 
   --clr-box-shadow: hsla(245, 75%, 52%, 0.1);
+  --clr-hover: hsla(245, 75%, 52%, 0.6);
 
   --ff-primary: 'Red Hat Display', sans-serif;
 
@@ -173,6 +174,23 @@ body {
 .cancel-order {
   font-size: 1.5rem;
   font-weight: var(--fw-bold);
+}
+
+@media (hover: hover) {
+  .change:hover {
+    cursor: pointer;
+    color: var(--clr-hover);
+  }
+
+  .button:hover {
+    cursor: pointer;
+    background-color: var(--clr-hover);
+  }
+
+  .cancel-order:hover {
+    cursor: pointer;
+    color: var(--clr-neutral-500);
+  }
 }
 
 @media (min-width: 32rem) and (min-height: 50rem) {
